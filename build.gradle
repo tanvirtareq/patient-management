@@ -10,3 +10,10 @@ allprojects {
         mavenCentral()
     }
 }
+
+tasks.register("runPs") {
+    group = "custom"
+    description = "Alias for running patient-service"
+    dependsOn(":patientservice:bootRun")
+}
+
